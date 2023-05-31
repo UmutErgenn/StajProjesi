@@ -57,4 +57,9 @@ public class _05_DataTableSteps {
         for(String strButtonName : listElemanlar)
             fc.findAndClick(strButtonName);
     }
+
+    @And("Success message should be displayed")
+    public void successMessageShouldBeDisplayed() {
+        dc.findAndContainsText("successMessage","success");
+    }
 }

@@ -23,7 +23,7 @@ public class DialogContent extends Parent {
     @FindBy(css = "button[aria-label='LOGIN']")
     private WebElement loginButton;
 
-    @FindBy(css = "span[class='mat-tooltip-trigger logo-text']")
+    @FindBy(xpath = "//span[@class='mat-tooltip-trigger logo-text']")
     private WebElement txtTechnoStudy;
 
     @FindBy(xpath = "//ms-add-button[contains(@tooltip,'TITLE.ADD')]//button")
@@ -77,6 +77,9 @@ public class DialogContent extends Parent {
 
     @FindBy(xpath = "//tbody[@role='rowgroup']/tr/td[2]")
     public List<WebElement> nameList;
+
+    @FindBy(xpath = "(//ms-edit-button//button)")
+    public WebElement editButton;
 
 
     WebElement myElement;
@@ -139,6 +142,9 @@ public class DialogContent extends Parent {
                 break;
             case "toggleBar":
                 myElement = toggleBar;
+                break;
+            case "editButton":
+                myElement = editButton;
                 break;
         }
 
