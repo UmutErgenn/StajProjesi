@@ -26,7 +26,7 @@ public class DialogContent extends Parent {
     @FindBy(xpath = "//span[@class='mat-tooltip-trigger logo-text']")
     private WebElement txtTechnoStudy;
 
-    @FindBy(xpath = "//ms-add-button[contains(@tooltip,'TITLE.ADD')]//button")
+    @FindBy(xpath = "//ms-add-button//button")      //           //ms-add-button[contains(@tooltip,'TITLE.ADD')]//button
     private WebElement addButton;
 
     @FindBy(xpath = "//ms-text-field[@formcontrolname='name']//input")
@@ -80,6 +80,15 @@ public class DialogContent extends Parent {
 
     @FindBy(xpath = "(//ms-edit-button//button)")
     public WebElement editButton;
+
+    @FindBy(xpath = "//mat-select[@role='combobox'][@formcontrolname='attachmentStages']")
+    public WebElement stage;
+
+    @FindBy(xpath = "//span[text()=' Employment ']")
+    public WebElement employmentSelect;
+
+    @FindBy(xpath = "//span[text()=' Examination ']")
+    public WebElement examinationSelect;
 
 
     WebElement myElement;
@@ -146,6 +155,15 @@ public class DialogContent extends Parent {
             case "editButton":
                 myElement = editButton;
                 break;
+            case "employmentSelect":
+                myElement = employmentSelect;
+                break;
+            case "examinationSelect":
+                myElement = examinationSelect;
+                break;
+            case "stage":
+                myElement = stage;
+                break;
         }
 
         clickFunction(myElement);
@@ -188,5 +206,4 @@ public class DialogContent extends Parent {
         findAndClick("deleteDialogBtn"); // dilogdaki silme butonuna bas
 
     }
-
 }
