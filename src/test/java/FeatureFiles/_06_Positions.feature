@@ -9,6 +9,7 @@ Feature: Positions Functionality
       | setUpHumResorces |
       | positions |
 
+  @Regression
   Scenario: Add positions
 
     And Click on the element in the Dialog

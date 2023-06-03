@@ -9,6 +9,7 @@ Feature: Document Types Functionality
       | setUpHumResorces |
       | positionCategories |
 
+  @Regression
   Scenario: Add document types
 
     And Click on the element in the Dialog

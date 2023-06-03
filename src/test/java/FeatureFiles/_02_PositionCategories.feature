@@ -9,6 +9,7 @@ Feature: Position Categories Functionality
       | setUpHumResorces |
       | positionCategories |
 
+  @Regression
   Scenario: Add position categories
 
     And Click on the element in the Dialog

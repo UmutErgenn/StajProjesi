@@ -9,6 +9,7 @@ Feature: Fields Functionality
       | parameters |
       | fields |
 
+  @Regression
   Scenario: Add fields
 
     And Click on the element in the Dialog

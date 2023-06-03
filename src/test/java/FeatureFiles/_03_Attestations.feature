@@ -9,6 +9,7 @@ Feature: Attestations Functionality
       | setUpHumResorces |
       | attestations |
 
+  @Regression
   Scenario: Add attestations
 
     And Click on the element in the Dialog
