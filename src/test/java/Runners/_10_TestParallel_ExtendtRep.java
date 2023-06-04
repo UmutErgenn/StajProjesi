@@ -20,11 +20,10 @@ public class _10_TestParallel_ExtendtRep extends AbstractTestNGCucumberTests {
     @Parameters("browser")
     public void beforeClass(String browser)
     {
-        // borwser türünü GWD ye gönder
         GWD.setThreadBrowserName(browser);
     }
 
-    @AfterClass // rapor bittiği zaman
+    @AfterClass
     public static void writeExtentReport() {
         ExtentService.getInstance().setSystemInfo("Windows User Name", System.getProperty("user.name"));
         ExtentService.getInstance().setSystemInfo("Time Zone", System.getProperty("user.timezone"));
